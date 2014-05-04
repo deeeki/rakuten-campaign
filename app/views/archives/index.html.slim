@@ -1,2 +1,7 @@
-h1 Archives#index
-p Find me in app/views/archives/index.html.slim
+h2 Recent campaigns
+
+- @archives.each do |archive|
+  h3= archive.displayed_on
+  ul
+    - archive.campaigns.each do |campaign|
+      li= link_to campaign.title, campaign.url
