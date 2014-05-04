@@ -12,3 +12,4 @@ gem 'sdoc', group: :doc
 gem 'spring', group: :development
 
 gem 'mechanize', require: false
+gem 'slim-rails'
