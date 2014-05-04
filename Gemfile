@@ -10,3 +10,5 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc', group: :doc
 gem 'spring', group: :development
+
+gem 'mechanize', require: false
