@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.1'
+
 gem 'rails'
 gem 'pg'
 gem 'sass-rails'
@@ -16,4 +18,8 @@ gem 'slim-rails'
 group :development do
   gem 'spring'
   gem 'html2slim', github: 'slim-template/html2slim'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
