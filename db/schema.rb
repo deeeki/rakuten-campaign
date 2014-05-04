@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504151649) do
+ActiveRecord::Schema.define(version: 20140504151905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,5 +23,16 @@ ActiveRecord::Schema.define(version: 20140504151649) do
   end
 
   add_index "archives", ["displayed_on"], name: "index_archives_on_displayed_on", unique: true, using: :btree
+
+  create_table "campaigns", force: true do |t|
+    t.integer  "archive_id", null: false
+    t.string   "title"
+    t.string   "url",        null: false
+    t.text     "html"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "campaigns", ["archive_id", "url"], name: "index_campaigns_on_archive_id_and_url", unique: true, using: :btree
 
 end
