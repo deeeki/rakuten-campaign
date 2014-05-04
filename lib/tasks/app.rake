@@ -18,4 +18,9 @@ namespace :app do
     end
     archive.save
   end
+
+  desc 'Notify the latest campaigns'
+  task notify: :environment do
+    ApplicationMailer.campaigns.deliver
+  end
 end
