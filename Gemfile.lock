@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/slim-template/html2slim.git
+  revision: d4debfe225636ed43e3c2536fc3d26443771454c
+  specs:
+    html2slim (0.0.6)
+      hpricot
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,6 +48,7 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
+    hpricot (0.8.6)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.6.9)
@@ -146,6 +154,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
+  html2slim!
   jbuilder
   jquery-rails
   mechanize

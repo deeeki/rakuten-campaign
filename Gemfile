@@ -9,7 +9,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc', group: :doc
-gem 'spring', group: :development
 
 gem 'mechanize', require: false
 gem 'slim-rails'
+
+group :development do
+  gem 'spring'
+  gem 'html2slim', github: 'slim-template/html2slim'
+end
