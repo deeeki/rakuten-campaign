@@ -1,4 +1,4 @@
 h3= archive.displayed_on
 ul
   - archive.campaigns.each do |campaign|
-    li= link_to campaign.title, campaign.url
+    li= link_to emphasize_point_rates(campaign.title), campaign.url
