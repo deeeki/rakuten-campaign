@@ -10,8 +10,8 @@ namespace :app do
     require 'mechanize'
     agent = Mechanize.new
     page = agent.get('http://event.rakuten.co.jp/smart/top/list/event/')
-    page.search('.itemArea a').each do |banner|
-      url = banner['href'].sub(/\?.*/, '')
+    urls = page.search('.itemArea a').map{|banner| banner['href'].sub(/\?.*/, '') }
+    urls.uniq.each do |url|
       campaign_page = agent.get(url)
       archive.campaigns.build({
         title: campaign_page.title,
