@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby ENV['CUSTOM_RUBY_VERSION'] if ENV['CUSTOM_RUBY_VERSION']
 
 gem 'rails'
 gem 'pg'
